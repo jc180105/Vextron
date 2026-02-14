@@ -1,20 +1,17 @@
-import HeroSection from "./components/HeroSection";
-import AuthorityBanner from "./components/AuthorityBanner";
-import BentoGridFeatures from "./components/BentoGridFeatures";
-import WhyVextron from "./components/WhyVextron";
-import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import SolutionsPage from "./pages/SolutionsPage";
 
 function App() {
   return (
-    <main className="min-h-screen bg-[#09090b] text-white">
-      <HeroSection />
-      <AuthorityBanner />
-      <BentoGridFeatures />
-      <WhyVextron />
-      <FAQ />
-      <Footer />
-    </main>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<AboutPage />} />
+        <Route path="/solucoes" element={<SolutionsPage />} />
+      </Routes>
+    </Router>
   );
 }
 

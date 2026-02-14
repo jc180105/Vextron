@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Bot, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20">
-            {/* Background Effects */}
+            {/* ... (background effects unchanged) */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] md:w-[1000px] md:h-[500px] bg-[var(--color-electric-blue)] opacity-10 blur-[80px] md:blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-[500px] h-[400px] md:w-[800px] md:h-[600px] bg-[var(--color-gold)] opacity-5 blur-[60px] md:blur-[100px] rounded-full pointer-events-none" />
 
             <div className="relative z-10 max-w-5xl mx-auto text-center">
+                {/* ... (Badge and Title unchanged) */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -48,15 +50,15 @@ const HeroSection = () => {
                     transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-6"
                 >
-                    <button className="w-full sm:w-auto px-8 py-4 bg-[var(--color-electric-blue)] text-black font-bold text-lg rounded-xl hover:bg-[#33FFFF] transition-all shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:shadow-[0_0_30px_rgba(0,255,255,0.5)] flex items-center justify-center gap-3 active:scale-95">
+                    <button className="w-full sm:w-auto px-8 py-4 bg-[var(--color-electric-blue)] text-black font-bold text-lg rounded-xl hover:bg-[#33FFFF] transition-all shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:shadow-[0_0_30px_rgba(0,255,255,0.5)] flex items-center justify-center gap-3 active:scale-95 cursor-pointer">
                         Solicitar Diagnóstico Gratuito
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
 
-                    <button className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 text-white font-medium text-lg rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-3 backdrop-blur-sm active:scale-95">
+                    <Link to="/solucoes" className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 text-white font-medium text-lg rounded-xl hover:bg-white/10 transition-all flex items-center justify-center gap-3 backdrop-blur-sm active:scale-95 cursor-pointer">
                         <Zap className="w-5 h-5 text-[var(--color-gold)]" />
                         Conhecer Soluções
-                    </button>
+                    </Link>
                 </motion.div>
             </div>
 

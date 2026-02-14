@@ -1,4 +1,5 @@
 import { Github, Twitter, Linkedin, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -26,19 +27,17 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-white mb-6">Soluções</h4>
                         <ul className="space-y-4 text-sm text-gray-400">
-                            <li><a href="#" className="hover:text-[var(--color-electric-blue)] transition-colors">Agentes de Vendas</a></li>
-                            <li><a href="#" className="hover:text-[var(--color-electric-blue)] transition-colors">Cobrança Automatizada</a></li>
-                            <li><a href="#" className="hover:text-[var(--color-electric-blue)] transition-colors">Agendamento Inteligente</a></li>
-                            <li><a href="#" className="hover:text-[var(--color-electric-blue)] transition-colors">Qualificação de Leads</a></li>
+                            <li><a href="/#features" className="hover:text-[var(--color-electric-blue)] transition-colors">Agentes de Vendas</a></li>
+                            <li><a href="/#features" className="hover:text-[var(--color-electric-blue)] transition-colors">Cobrança Automatizada</a></li>
+                            <li><a href="/#features" className="hover:text-[var(--color-electric-blue)] transition-colors">Agendamento Inteligente</a></li>
+                            <li><a href="/#features" className="hover:text-[var(--color-electric-blue)] transition-colors">Qualificação de Leads</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold text-white mb-6">Empresa</h4>
                         <ul className="space-y-4 text-sm text-gray-400">
-                            <li><a href="#" className="hover:text-[var(--color-electric-blue)] transition-colors">Sobre Nós</a></li>
-                            <li><a href="#" className="hover:text-[var(--color-electric-blue)] transition-colors">Carreiras</a></li>
-                            <li><a href="#" className="hover:text-[var(--color-electric-blue)] transition-colors">Blog</a></li>
-                            <li><a href="#" className="hover:text-[var(--color-electric-blue)] transition-colors">Contato</a></li>
+                            <li><Link to="/sobre" className="hover:text-[var(--color-electric-blue)] transition-colors">Sobre Nós</Link></li>
+                            <li><a href="https://wa.me/5548988438860" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-electric-blue)] transition-colors">Contato</a></li>
                         </ul>
                     </div>
                 </div>
