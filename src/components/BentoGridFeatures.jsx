@@ -41,7 +41,7 @@ const BentoGridFeatures = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
@@ -49,13 +49,15 @@ const BentoGridFeatures = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className={`p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-[var(--color-electric-blue)]/30 hover:bg-white/[0.07] transition-all group ${feature.className}`}
+                            className={`p-8 md:p-10 rounded-3xl bg-white/5 border border-white/5 hover:border-[var(--color-electric-blue)]/30 hover:bg-white/[0.07] transition-all group flex flex-col justify-between ${feature.className === "md:col-span-2" ? "md:col-span-2 lg:col-span-2" : "md:col-span-1 lg:col-span-1"}`}
                         >
-                            <div className="w-12 h-12 rounded-2xl bg-[var(--color-electric-blue)]/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <feature.icon className="w-6 h-6 text-[var(--color-electric-blue)]" />
+                            <div>
+                                <div className="w-14 h-14 rounded-2xl bg-[var(--color-electric-blue)]/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                                    <feature.icon className="w-7 h-7 text-[var(--color-electric-blue)]" />
+                                </div>
+                                <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">{feature.title}</h3>
+                                <p className="text-gray-400 leading-relaxed text-sm md:text-base">{feature.description}</p>
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
-                            <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                         </motion.div>
                     ))}
                 </div>

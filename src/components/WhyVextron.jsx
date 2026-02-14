@@ -32,14 +32,14 @@ const WhyVextron = () => {
                     <h2 className="text-4xl font-bold mt-2">A vantagem competitiva definitiva</h2>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-8 md:gap-12">
                     {reasons.map((reason, index) => (
-                        <div key={index} className="bg-white/[0.03] border border-white/10 p-8 rounded-2xl hover:bg-white/[0.05] transition-colors">
-                            <div className={`w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mb-6 ${reason.color}`}>
-                                <reason.icon className="w-7 h-7" />
+                        <div key={index} className="bg-white/[0.03] border border-white/10 p-8 md:p-10 rounded-3xl hover:bg-white/[0.05] transition-all hover:-translate-y-1">
+                            <div className={`w-14 h-14 md:w-16 md:h-16 rounded-xl bg-white/5 flex items-center justify-center mb-6 md:mb-8 ${reason.color}`}>
+                                <reason.icon className="w-7 h-7 md:w-8 md:h-8" />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
-                            <p className="text-gray-400 leading-relaxed">{reason.description}</p>
+                            <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{reason.title}</h3>
+                            <p className="text-gray-400 leading-relaxed text-sm md:text-base">{reason.description}</p>
                         </div>
                     ))}
                 </div>
